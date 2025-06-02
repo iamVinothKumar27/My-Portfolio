@@ -15,11 +15,10 @@
   const headerToggleBtn = document.querySelector('.header-toggle');
 
   function headerToggle() {
-    document.querySelector('#navmenu').classList.toggle('navmenu-active');
+    document.querySelector('#header').classList.toggle('header-show');
     headerToggleBtn.classList.toggle('bi-list');
     headerToggleBtn.classList.toggle('bi-x');
   }
-  
   headerToggleBtn.addEventListener('click', headerToggle);
 
   /**
@@ -27,10 +26,9 @@
    */
   document.querySelectorAll('#navmenu a').forEach(navmenu => {
     navmenu.addEventListener('click', () => {
-      if (document.querySelector('#navmenu.navmenu-active')) {
+      if (document.querySelector('.header-show')) {
         headerToggle();
       }
-      
     });
 
   });
