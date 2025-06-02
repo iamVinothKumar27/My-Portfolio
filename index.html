@@ -42,16 +42,7 @@
 </head>
 
 <body class="index-page">
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const toggle = document.querySelector('.header-toggle');
-      const navMenu = document.getElementById('navmenu');
   
-      toggle.addEventListener('click', function () {
-        navMenu.classList.toggle('navmenu-active');
-      });
-    });
-  </script>
   
   <style>
     /* Default: hide menu on small screens */
@@ -1161,6 +1152,16 @@
       });
     });
 
+  </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const toggle = document.querySelector('.header-toggle');
+      const navMenu = document.getElementById('navmenu');
+  
+      toggle.addEventListener('click', function () {
+        navMenu.classList.toggle('navmenu-active');
+      });
+    });
   </script>
 
 
