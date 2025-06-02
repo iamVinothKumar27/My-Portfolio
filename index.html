@@ -42,6 +42,34 @@
 </head>
 
 <body class="index-page">
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const toggle = document.querySelector('.header-toggle');
+      const navMenu = document.getElementById('navmenu');
+
+      toggle.addEventListener('click', function () {
+        navMenu.classList.toggle('navmenu-active'); // Toggle class for showing/hiding menu
+      });
+    });
+  </script>
+  <style>
+    /* Default: hide menu on small screens */
+    @media (max-width: 991px) {
+      #navmenu {
+        display: none;
+      }
+
+      #navmenu.navmenu-active {
+        display: block;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background: white;
+        width: 100%;
+        z-index: 999;
+      }
+    }
+  </style>
 
   <header id="header" class="header d-flex flex-column justify-content-center">
 
@@ -980,25 +1008,30 @@
       font-weight: 500;
       margin-top: 15px;
     }
-    
+
     .sent-message {
-      background-color: #d1e9ff; /* Light blue */
-      color: #0563bb;           /* Primary blue */
+      background-color: #d1e9ff;
+      /* Light blue */
+      color: #0563bb;
+      /* Primary blue */
       border-left: 4px solid #0563bb;
     }
-    
+
     .error-message {
-      background-color: #ffe0e0; /* Light red */
-      color: #d32f2f;            /* Error red */
+      background-color: #ffe0e0;
+      /* Light red */
+      color: #d32f2f;
+      /* Error red */
       border-left: 4px solid #d32f2f;
     }
-    
+
     .loading {
-      background-color: #fff8db; /* Light yellow */
-      color: #c59100;            /* Gold/amber text */
+      background-color: #fff8db;
+      /* Light yellow */
+      color: #c59100;
+      /* Gold/amber text */
       border-left: 4px solid #c59100;
     }
-    
   </style>
 
   <footer id="footer" class="footer position-relative light-background">
