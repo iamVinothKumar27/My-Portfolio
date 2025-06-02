@@ -46,12 +46,13 @@
     document.addEventListener("DOMContentLoaded", function () {
       const toggle = document.querySelector('.header-toggle');
       const navMenu = document.getElementById('navmenu');
-
+  
       toggle.addEventListener('click', function () {
-        navMenu.classList.toggle('navmenu-active'); // Toggle class for showing/hiding menu
+        navMenu.classList.toggle('navmenu-active');
       });
     });
   </script>
+  
   <style>
     /* Default: hide menu on small screens */
     @media (max-width: 991px) {
@@ -70,10 +71,12 @@
       }
     }
   </style>
-
   <header id="header" class="header d-flex flex-column justify-content-center">
 
-    <i class="header-toggle d-xl-none bi bi-list"></i>
+    <button class="header-toggle d-xl-none" aria-label="Toggle navigation">
+      <i class="bi bi-list"></i>
+    </button>
+    
 
     <nav id="navmenu" class="navmenu">
       <ul>
